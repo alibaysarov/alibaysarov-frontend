@@ -47,7 +47,7 @@ const Content:FC<ContentProps> = ({posts,loaded}) => {
                                 <Box>
                                 <Box mb={16}>
                                     <Stack style={{width:'100%'}} justify='end'>
-                                        <Img clickHandler={closePopupHandler} alt={'close'} src={'public/img/icons/Close.svg'} width={24} height={24} />
+                                        <Img clickHandler={closePopupHandler} alt={'close'} src={'/img/icons/Close.svg'} width={24} height={24} />
                                     </Stack>
                                 </Box>
                                 <Img  cls={cl.popupImg} alt={postInfo.title} width={400} src={postInfo.img} srcSet={postInfo.img_2x} />

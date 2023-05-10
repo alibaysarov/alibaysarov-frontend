@@ -2,9 +2,8 @@
 .menuItem
   font-weight: 500
   cursor: pointer
-  width: 100%
+ 
   
-  border-bottom: 1px solid lighten($grey,10% ) 
   &:hover
     .subMenu
       overflow: auto
@@ -51,6 +50,8 @@
 
 @media  ( max-width: 768px )
   .menuItem
+    width: 100%
+    border-bottom: 1px solid lighten($grey,10% ) 
     &:hover
       .subMenu
         position: static

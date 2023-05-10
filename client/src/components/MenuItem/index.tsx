@@ -19,7 +19,7 @@ const SubMenuItem:FC<SubmenuItemProps> =({name,link})=>{
     <Stack classes={cl.subMenu__item} justify='space-between' spacing={'55px'}>
       <Link classes={cl.subMenu__link} href={link}>{name}</Link>
       {!isTablet&&
-        <Img src='/public/img/icons/arrow-rt.svg' height={8} width={5} alt='More' />
+        <Img src='/img/icons/arrow-rt.svg' height={8} width={5} alt='More' />
       }
     </Stack>
   )
@@ -65,7 +65,7 @@ const MenuItem:FC <MenuItemProps> =({link,title,submenu})=> {
           ?<Link fontSize={isTablet?20:16} href={link}>{title}</Link>
           :<Typography tag='span' fontSize={isTablet?20:16} color='primary' >{title}</Typography>
         }
-        {hasSubMenu()&&<Img {...arrow} src='/public/img/icons/arrow-dn.svg' srcSet='/public/img/icons/arrow-dn.svg' alt='Подробнее'/>}
+        {hasSubMenu()&&<Img {...arrow} src='/img/icons/arrow-dn.svg' srcSet='/img/icons/arrow-dn.svg' alt='Подробнее'/>}
       </Stack>
       {
         hasSubMenu()

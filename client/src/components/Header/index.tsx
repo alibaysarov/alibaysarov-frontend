@@ -32,10 +32,10 @@ const Header:React.FC<HeaderProps> = ({inputHandler,inputValue}) => {
               isTablet&& <Burger burgerRef={burgerRef} opened={mobileShow} setOpened={setMobileShow}/>
             }
             <Stack style={{width:'100%'}} justify='center'>
-              <Img width={181} height={27} alt='Логотип' src={'public/img/header/Logo.svg'} srcSet='public/img/header/Logo.svg'/>
+              <Img width={181} height={27} alt='Логотип' src={'/img/header/Logo.svg'} srcSet='/img/header/Logo.svg'/>
             </Stack>
             <Box boxRef={initRef} classes={cl.search}>
-              <Img clickHandler={toggleSearch} cls={cl.search__img} width={16} height={16} alt='Поиск' src='public/img/icons/search.svg' srcSet='public/img/icons/search.svg'/>
+              <Img clickHandler={toggleSearch} cls={cl.search__img} width={16} height={16} alt='Поиск' src='/img/icons/search.svg' srcSet='/img/icons/search.svg'/>
               {
                 show&&
                 <Search  setOpened={setShow} opened={show} searchRef={ref} inputValue={inputValue} inputHandler={inputHandler}/>

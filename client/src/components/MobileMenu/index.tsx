@@ -38,8 +38,8 @@ const MobileMenu:FC<MobileMenuProps> = ({opened,mobRef,setOpened}) => {
         <Box  pt={30} boxRef={mobRef} classes={opened==false?cl.mobileMenu:`${cl.mobileMenu} ${cl.active}`}>
             <Box classes={cl.menuTop} mb={10} pb={10}>
                 <Stack justify='space-between'>
-                    <Img cls={cl.menuTopImg} alt='Лого' src='public/img/header/Logo.svg' width={161} height={24}/>
-                    <Img cls={cl.closeMenu} clickHandler={()=>setOpened(false)} alt='Лого' src='public/img/icons/MenuClose.svg' width={18} height={18}/>
+                    <Img cls={cl.menuTopImg} alt='Лого' src='/img/header/Logo.svg' width={161} height={24}/>
+                    <Img cls={cl.closeMenu} clickHandler={()=>setOpened(false)} alt='Лого' src='img/icons/MenuClose.svg' width={18} height={18}/>
                 </Stack>
             </Box>
           <Box pl={20} pr={10}>
