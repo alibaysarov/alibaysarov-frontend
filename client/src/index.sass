@@ -1,0 +1,32 @@
+@import 'vars'
+  
+*
+  margin: 0px
+  padding: 0px
+  text-decoration: none
+  outline: none
+body
+  font-size: 16px
+h1,h2,h3,h4,h5,h6
+  font-family: $text
+  color: $black
+  line-height: calc( 30px / 24px )
+h3
+  font-weight: bold
+  +fSize(24)
+strong,b
+  font-weight: bold
+  color: $black
+  font-family: $text
+
+p,span
+  font-family: $text
+  +fSize(14)
+  color: $grey
+.red
+  color: $red
+
+@media ( max-width: 375px )
+  h2
+    line-height: calc( 30px / 20px )
+  

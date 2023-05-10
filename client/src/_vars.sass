@@ -1,0 +1,19 @@
+// font-family: 'DM Sans', sans-serif;
+//fonts
+$text: 'Roboto', sans-serif
+
+//colors
+$grey:#929292
+$red:#EB0028
+$black:#000000
+
+//mixins
+@mixin trns($prop:all)
+  transition: $prop .3s ease
+    
+@mixin  fSize($size)
+  font-size: calc($size/16) + rem 
+@mixin fontSize($pcSize, $mobSize,$maxWidth:1160) 
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))

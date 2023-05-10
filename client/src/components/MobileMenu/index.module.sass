@@ -1,0 +1,23 @@
+@import "../../vars"
+.mobileMenu
+    position: fixed
+    +trns()
+    z-index: 100
+    top: 0px
+    bottom: 0px
+    right: 0px
+    left: -200%
+    width: 75%
+    height: 100%
+    padding-top: 40px
+    background-color: #fff
+    .menuTop
+        border-bottom: 1px solid $grey
+    .menuTopImg
+        margin-left: 10px
+    .closeMenu
+        margin-right: 10px
+    &.active
+        left: 0px
+    .item
+        width: 100%

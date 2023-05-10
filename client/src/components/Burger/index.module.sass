@@ -1,0 +1,29 @@
+@import "../../vars"
+.burger
+  position: relative
+  z-index: 50
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 35px
+  +trns()
+  &__line
+    width: 100%
+    height: 2px
+    margin-bottom: 7px
+    background-color: $black
+    +trns()
+    &:last-of-type
+      margin-bottom: 0px
+  &.active
+    .burger__line
+      &:first-of-type
+        transform: rotate(45deg) translate(5px,4px)
+        margin-bottom: 0px
+      &:nth-of-type(2)
+        opacity: 0
+        margin-bottom: 0px
+      &:last-of-type
+        transform: rotate(-45deg) translate(-1px,3px)
+    

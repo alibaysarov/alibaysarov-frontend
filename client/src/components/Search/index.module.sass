@@ -1,0 +1,21 @@
+@import  "../../vars"
+.search
+    position: absolute
+    z-index: 300
+    right: 10px
+    &__input
+        padding: 10px
+        border-radius: 5px
+        border: 1px solid $grey
+        font-size: 1rem
+        color: $black
+        font-weight: 500
+    &::focus
+        outline: solid 10px $black
+@media screen and ( max-width:  425px)
+    .search
+        top: 45px
+        left: -350px
+        &__input
+            width: 90%
+            margin: 0 10px

@@ -1,0 +1,45 @@
+.popup
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  z-index: 500
+  background-color: rgba(0,0,0,0.4)
+  transition: 0.5s
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px
+  cursor: pointer
+  pointer-events: none
+  opacity: 0
+  &.active
+    opacity: 1
+    pointer-events: all
+  &__cnt
+    background-color: #fff
+    border-radius: 15px
+    transition: 0.5s
+    padding: 20px
+    transform: scale(0)
+    opacity: 0
+    transform: scale(.5)
+    &.active
+      transform: scale(1)
+      opacity: 1
+@media ( max-width: 768px )
+  .popup
+    // justify-content: start
+    &__cnt
+      max-width: 40vh
+
+@media (max-width:375px)
+  .popup
+    // justify-content: start
+    padding: 0px
+    &__cnt
+      max-width: 30vh
+      // transform: translateX(-25%)

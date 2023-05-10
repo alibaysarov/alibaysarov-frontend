@@ -1,0 +1,1 @@
+export const toRem=(prop:number|undefined):string|0 =>prop!=undefined ? prop/16 +'rem':0;
