@@ -15,7 +15,7 @@ interface HeaderProps{
 }
 const Header:React.FC<HeaderProps> = ({inputHandler,inputValue}) => {
   
-  const [menuOpened,setmenuOpened]=React.useState<boolean>(false)
+  
   const {ref:mobRef,initRef:burgerRef,show:mobileShow,setShow:setMobileShow}=useOutside(false)
   // const [searchOpen,setSearchOpen]=React.useState<boolean>(false)
   const {ref,initRef,show,setShow}=useOutside(false)

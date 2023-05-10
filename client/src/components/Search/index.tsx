@@ -5,11 +5,11 @@ interface ISearchProps{
     inputValue:string
     inputHandler:React.ChangeEventHandler<HTMLInputElement>,
     // rootEl:React.MutableRefObject<HTMLDivElement | null>,
-    opened:boolean,
+    opened?:boolean,
     searchRef?:React.RefObject<HTMLDivElement>
-    setOpened:React.Dispatch<React.SetStateAction<boolean>>,
+    setOpened?:React.Dispatch<React.SetStateAction<boolean>>,
 }
-const Search:React.FC<ISearchProps> = ({opened,setOpened,searchRef,inputValue,inputHandler}) => {
+const Search:React.FC<ISearchProps> = ({searchRef,inputValue,inputHandler}) => {
     const inputRef=React.useRef< HTMLInputElement |null >(null)
     
    
@@ -22,7 +22,7 @@ const Search:React.FC<ISearchProps> = ({opened,setOpened,searchRef,inputValue,in
                 inputRef.current.blur()
             }
         }
-    },[])
+    },[inputRef])
     return (
         <div ref={searchRef} className={cl.search}>
         <input placeholder='Поиск...' onChange={inputHandler} value={inputValue} ref={inputRef} className={cl.search__input} type="text" />

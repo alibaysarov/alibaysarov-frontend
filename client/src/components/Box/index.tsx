@@ -19,7 +19,7 @@ interface BoxProps{
     mr?:number
     type?:string,
     classes?:string,
-    onClick?:any,
+    onClick?:React.MouseEventHandler<HTMLDivElement>|any,
     boxRef?:React.RefObject<HTMLDivElement>
 }
 const Box:FC<BoxProps> = ({boxRef,onClick,style,type,classes,children,p,py,px,pl,pr,pt,pb,m,mx,mr,ml,mt,mb,my}) => {
